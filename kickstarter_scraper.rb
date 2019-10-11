@@ -14,6 +14,7 @@ def create_project_hash
     projects[title]= {
       :image_link => stuff.css("div.project-thumbnail a img").attribute("src").value,
       :description => stuff.css("p.bbcard_blurb").text
+      :location => stuff.css("ul.project-meta span.location-name").text
     }
   end
   projects
