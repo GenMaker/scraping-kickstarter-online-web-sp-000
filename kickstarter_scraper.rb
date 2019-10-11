@@ -13,6 +13,7 @@ def create_project_hash
     title = stuff.css("h2.bbcard_name strong a").text
     projects[title]= []
   end
+  projects
 end
 
 # create_project_hash
