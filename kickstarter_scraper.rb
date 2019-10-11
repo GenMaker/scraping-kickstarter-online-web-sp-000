@@ -12,7 +12,8 @@ def create_project_hash
     # binding.pry
     title = stuff.css("h2.bbcard_name strong a").text
     projects[title]= {
-      :image_link => stuff.css("div.project-thumbnail a img").attribute("src").value
+      :image_link => stuff.css("div.project-thumbnail a img").attribute("src").value,
+      :description => stuff.css("p.bbcard_blurb").text
     }
   end
   projects
